@@ -27,7 +27,6 @@
     wb.Sheets["Expenses"] = XLSX.utils.aoa_to_sheet(ws_data);
 
     var wbout = XLSX.write(wb, {bookType:'xlsx',  type: 'array'});
-    console.log(wbout)
     return wbout
   }
 
