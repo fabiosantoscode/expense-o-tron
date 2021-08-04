@@ -66,13 +66,20 @@
 	h1 {
 		color: #ff3e00;
 		text-transform: uppercase;
-		font-size: 4em;
+		font-size: 1.5em;
 		font-weight: 100;
+	}
+
+	@media screen and (min-width: 800px) {
+		h1 {
+			font-size: 4em;
+		}
 	}
 
 	.expense {
 		display: flex;
 		align-items: center;
+		flex-direction: column;
 		padding: 0.3em 0.5em;
 		margin: 1em;
 	}
@@ -83,12 +90,24 @@
 	}
 
 	.expense > * + * {
-		margin-left: 0.33em;
+		margin-top: 0.33em;
+	}
+
+	@media screen and (min-width: 800px) {
+		.expense {
+			flex-direction: row;
+		}
+
+		.expense > * + * {
+			margin-top: 0;
+			margin-left: 0.33em;
+		}
 	}
 
 	.upload {
     display: flex;
     align-items: center;
+		justify-content: center;
 		padding: 0 1em;
 		color: rgb(48, 127, 201);
 		font-weight: bold;

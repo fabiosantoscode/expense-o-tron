@@ -67,7 +67,7 @@
 <style>
 	.download {
 		display: block;
-		padding: 2em;
+		padding: 1.5em;
 		text-align: center;
 		font-size: 1.33em;
 		color: #ff3e00;
