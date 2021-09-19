@@ -19,12 +19,13 @@
     wb.SheetNames.push('Expenses')
 
     var ws_data = [
-      ['Receipt file name', 'Description', 'Date', 'Time'],
-      ...expenses.map(({ file, description, date, time }) => [
+      ['Receipt file name', 'Description', 'Date', 'Time', 'Cost'],
+      ...expenses.map(({ file, description, date, time, cost }) => [
         file?.name ?? '',
         description,
         date,
         time,
+        cost,
       ]),
     ]
     wb.Sheets['Expenses'] = XLSX.utils.aoa_to_sheet(ws_data)
